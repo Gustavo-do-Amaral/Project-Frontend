@@ -1,2 +1,2 @@
 # Project-Frontend
-Using HTML, for now.
+Just college projects, using HTML, CSS, JS
