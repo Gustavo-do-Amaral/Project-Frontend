@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fato</title>
+    <link rel="stylesheet" href="./assets/estilos/global.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1> Fato ocorrido </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th> Fatos </th>
+                    <th> Descrição </th>
+                    <th> Escolha </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Furto </td>
+                    <td> Roubar alguém por querer </td>
+                    <td> 
+                        <input type="radio" 
+                            name="fato" 
+                            id="fato_fur" 
+                            onclick="salvarFato('fato_fur')">
+                    </td>
+                </tr>
+                <tr>
+                    <td> Homicidio </td>
+                    <td> Matar alguém por querer </td>
+                    <td> 
+                        <input type="radio" 
+                               name="fato"
+                               id="fato_hom"
+                               onclick="salvarFato('fato_hom')"
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td> Violência Doméstica</td>
+                    <td> Bater em casa alguém por querer </td>
+                    <td> 
+                        <input type="radio" 
+                               name="fato"
+                               id="fato_vio"
+                               onclick="salvarFato('fato_vio')"
+                        >
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="./confirmar_fato.html" class="botao" onclick="salvarFatos()">
+            Próximo
+        </a>
+    </div>
+    <script type="text/javascript" src="./assets/scripts/fato.js"></script>
+</body>
+
+</html>
