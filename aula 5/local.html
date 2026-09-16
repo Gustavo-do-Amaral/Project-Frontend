@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data</title>
+    <title>Local</title>
     <link rel="stylesheet" 
           href="./assets/estilos/global.css">
 </head>
@@ -13,27 +13,26 @@
         <div class="sidebar" id="sidebar"></div>
         <div class="container">
         <form> 
-            <h1> Insira a data e hora do fato </h1>
-            <div class="campo">
-                <label for="dia">Data do fato</label>
-                <input type="date" id="dia">
-            </div>
-            <div class="campo">
-                <label for="hora">Hora do fato</label>
-                <input type="time" id="hora">
-            </div>
-    
-            <a href="./local.html" class="botao" 
-               onclick="salvarData()"> Próximo </a>
+            <h1> Dados do local </h1>
+            <label> Rua: </label>
+            <input type="text" id="rua"><br><br>
+            <label> Cidade: </label>
+            <input type="text" id="cidade"><br><br>
+            <label> Estado: </label>
+            <input type="text" id="estado"><br><br>
+            <label> CEP: </label>
+            <input type="text" id="cep"><br><br>
+            <a href="./resumoBO.html" class="botao" 
+               onclick="salvarLocal()"> Concluir </a>
         </form>
         </div>
     </div>
     
     <script type="text/javascript" src="./assets/scripts/sidebar.js"></script>
     <script type="text/javascript"
-            src="./assets/scripts/data.js"></script>
+            src="./assets/scripts/local.js"></script>
     <script type="text/javascript">
-        montarSidebar(3);
+        montarSidebar(4);
     </script>
 </body>
 </html>

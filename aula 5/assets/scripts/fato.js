@@ -1,18 +1,37 @@
-function salvarFato(id) { const fatoSelecionado = document.getElementById(id); 
-    if (fatoSelecionado.checked) { sessionStorage.setItem('fato', id); 
-        console.log('Fato selecionado:', id); 
-    } 
+function salvarFato(id) {
+    const fatoSelecionado = document.getElementById(id);
+
+    if (!fatoSelecionado || !fatoSelecionado.checked) {
+        return;
+    }
+
+    const linha = fatoSelecionado.closest('tr');
+    const fato = {
+        fato: linha ? linha.cells[0].innerText.trim() : fatoSelecionado.id,
+        descricao: linha ? linha.cells[1].innerText.trim() : ''
+    };
+
+    sessionStorage.setItem('fato', JSON.stringify(fato));
+    console.log('Fato selecionado:', fato);
 }
+
+function salvarFatos() {
+    const fatoSelecionado = document.querySelector('input[name="fato"]:checked');
+
+    if (!fatoSelecionado) {
+        return false;
+    }
+
+    salvarFato(fatoSelecionado.id);
+    return true;
+}
+
 const carregarFato = function () {
-    let fatos = sessionStorage.getItem('fatos');
-    let descricao = sessionStorage.getItem('descrição');
-    let escolha = sessionStorage.getItem('escolha');
+    const fatoSalvo = JSON.parse(sessionStorage.getItem('fato'));
 
-    let fato = `Fato ${fatos}
-     Descricao ${descricao}
-     Escolha ${escolha}`;
-  
-    
-    console.log(fato);
+    if (!fatoSalvo) {
+        return;
+    }
 
+    console.log(`Fato ${fatoSalvo.fato} - Descricao ${fatoSalvo.descricao}`);
 }

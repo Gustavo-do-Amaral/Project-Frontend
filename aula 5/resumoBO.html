@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo</title>
+    <link rel="stylesheet" 
+    href="./assets/estilos/global.css">
+</head>
+
+<body>
+    <h1 class="titulo-sistema">Registro de Boletim de Ocorrência</h1>
+    <div class="layout">
+        <div class="sidebar" id="sidebar"></div>
+        <div class="container">
+        <h1> Resumo do local </h1>
+        <label> Rua: </label><label id="rua"> </label><br>
+        <label> Cidade: </label><label id="cidade"> </label><br>
+        <label> Estado: </label><label id="estado"> </label><br>
+        <label> Cep: </label><label id="cep"> </label><br>
+        
+        <h1> Resumo do fato </h1>
+        <label> Fato: </label><label id="fato"> </label><br>
+        <label> Descrição: </label><label id="descricao"> </label><br>
+
+        <h1> Resumo da data </h1>
+        <label> Data: </label><label id="dia"> </label><br>
+        <label> Hora: </label><label id="hora"> </label><br>
+        
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./assets/scripts/sidebar.js"></script>
+    <script type="text/javascript" 
+    src="./assets/scripts/resumoBO.js"></script>
+    <script type="text/javascript">
+        montarSidebar(5);
+    </script>
+</body>
+
+</html>
